@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
   turbopack: {
     root: __dirname,
+    resolveAlias: {
+      three: "./lib/three-compat.ts",
+      "three-original": "./node_modules/three/build/three.module.js",
+    },
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],
